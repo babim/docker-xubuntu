@@ -1,13 +1,6 @@
-FROM ubuntu
+FROM babim/ubuntubase
 
 MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
-
-RUN rm -f /etc/motd && \
-    echo "---" > /etc/motd && \
-    echo "Support by Duc Anh Babim. Contact: ducanh.babim@yahoo.com" >> /etc/motd && \
-    echo "---" >> /etc/motd && \
-    echo "Babim Container Framework \n \l" > /etc/issue && \
-    touch "/(C) Babim"
 
 RUN apt-get clean && \
     apt-get update && \
