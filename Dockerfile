@@ -8,7 +8,7 @@ RUN apt-get clean && \
     apt-get install xubuntu-desktop --no-install-recommends -y --force-yes && \
     apt-get install nano mousepad xfce4-taskmanager gnome-icon-theme-full firefox flashplugin-installer tightvncserver\
     -y --force-yes && \
-    apt-get purge sane* scan* transmission* abiword* gnumetic* parole* banshee* totem* -y --force-yes && \
+    apt-get purge sane* scan* transmission* abiword* gnumeric* parole* banshee* totem* -y --force-yes && \
     apt-get clean && \
     apt-get autoclean && \
     apt-get autoremove -y
