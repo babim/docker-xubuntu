@@ -1,4 +1,4 @@
-FROM babim/ubuntubase:ssh
+FROM babim/ubuntubase
 
 MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
 
