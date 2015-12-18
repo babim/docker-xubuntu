@@ -4,7 +4,6 @@ MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
 
 RUN apt-get clean && \
     apt-get update && \
-    apt-get dist-upgrade -y --force-yes && \
     apt-get install xubuntu-desktop --no-install-recommends -y --force-yes && \
     apt-get install nano mousepad xfce4-taskmanager gnome-icon-theme-full firefox flashplugin-installer tightvncserver\
     -y --force-yes && \
@@ -17,7 +16,9 @@ RUN apt-get clean && \
 WORKDIR /data
 
 # Define default command.
-CMD ["bash"]
+CMD ["vncserver"]
 
 # Expose ports.
 EXPOSE 5901
+
+ENV LC_ALL en_US.UTF-8
