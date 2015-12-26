@@ -16,8 +16,8 @@ RUN apt-get clean && \
 WORKDIR /data
 
 # Define default command.
-CMD ["vncserver"]
-CMD ["bash"]
+RUN echo "bash" > /startup.sh && echo "vncserver" >> /startup.sh && chmod +x /startup.sh
+CMD ["/startup.sh"]
 
 # Expose ports.
 EXPOSE 5901
