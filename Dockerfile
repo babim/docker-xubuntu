@@ -17,6 +17,7 @@ WORKDIR /data
 
 # Define default command.
 CMD ["vncserver"]
+CMD ["bash"]
 
 # Expose ports.
 EXPOSE 5901
