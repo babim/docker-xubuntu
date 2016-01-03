@@ -1,7 +1,5 @@
 FROM babim/ubuntubase
 
-MAINTAINER "Duc Anh Babim" <ducanh.babim@yahoo.com>
-
 RUN apt-get clean && \
     apt-get update && \
     apt-get install xubuntu-desktop --no-install-recommends -y --force-yes && \
@@ -21,6 +19,3 @@ CMD ["/startup.sh"]
 
 # Expose ports.
 EXPOSE 5901
-
-ENV LC_ALL en_US.UTF-8
-ENV TZ Asia/Ho_Chi_Minh
