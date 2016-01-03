@@ -1,7 +1,6 @@
 FROM babim/ubuntubase
 
-RUN apt-get clean && \
-    apt-get update && \
+RUN apt-get update && \
     apt-get install xubuntu-desktop --no-install-recommends -y --force-yes && \
     apt-get install nano mousepad xfce4-taskmanager gnome-icon-theme-full firefox flashplugin-installer tightvncserver\
     -y --force-yes && \
