@@ -10,7 +10,13 @@ RUN apt-get update && \
     apt-get autoremove -y
 
 # Define default command.
-RUN echo '#!/bin/bash' > /startup.sh && echo "vncserver" >> /startup.sh && echo "bash" >> /startup.sh && chmod +x /startup.sh
+RUN echo '#!/bin/bash' > /startup.sh && \
+    echo "rm -f /tmp/.X*" >> /startup.sh && \
+    echo "USER=root" >> /startup.sh && \
+    echo "HOME=/root" >> /startup.sh && \
+    echo "export USER HOME" >> /startup.sh && \
+    echo "vncserver :1" >> /startup.sh && \
+    echo "bash" >> /startup.sh && chmod +x /startup.sh
 CMD ["/startup.sh"]
 
 # Expose ports.
