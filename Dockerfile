@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 # Define default command.
 RUN echo '#!/bin/bash' > /startup.sh && \
-    echo "rm -f /tmp/.X*" >> /startup.sh && \
+    echo "rm -rf /tmp/.X*" >> /startup.sh && \
     echo "USER=root" >> /startup.sh && \
     echo "HOME=/root" >> /startup.sh && \
     echo "export USER HOME" >> /startup.sh && \
