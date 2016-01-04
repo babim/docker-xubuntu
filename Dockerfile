@@ -9,9 +9,6 @@ RUN apt-get update && \
     apt-get autoclean && \
     apt-get autoremove -y
 
-# Define working directory.
-WORKDIR /data
-
 # Define default command.
 RUN echo "bash" > /startup.sh && echo "vncserver" >> /startup.sh && chmod +x /startup.sh
 CMD ["/startup.sh"]
