@@ -1,5 +1,7 @@
 FROM babim/ubuntubase
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update && \
     apt-get install xubuntu-desktop --no-install-recommends -y --force-yes && \
     apt-get install nano mousepad xfce4-taskmanager gnome-icon-theme-full firefox flashplugin-installer tightvncserver\
