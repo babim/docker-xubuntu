@@ -9,5 +9,11 @@ RUN apt-get update && \
 # install
 RUN wget -O - https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Xubuntu%20install/xubuntu_install.sh | bash
 
+# clean
+RUN apt-get purge build-essential automake -y && apt-get clean && \
+    apt-get autoclean && \
+    apt-get autoremove -y --purge && \
+    rm -rf /var/lib/apt/lists/*
+
 # Expose ports.
 EXPOSE 5901
