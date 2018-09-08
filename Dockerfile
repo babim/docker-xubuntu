@@ -7,7 +7,7 @@ RUN apt-get update && \
     chmod 755 /option.sh
 
 # install
-RUN wget -O - https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Xubuntu%20install/xubuntu_install.sh | bash
+RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Xubuntu%20install/xubuntu_install.sh | bash
 
 # clean
 RUN apt-get purge build-essential automake -y && apt-get clean && \
