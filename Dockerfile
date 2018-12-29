@@ -15,5 +15,7 @@ RUN apt-get purge build-essential automake -y && apt-get clean && \
     apt-get autoremove -y --purge && \
     rm -rf /var/lib/apt/lists/*
 
+CMD ["/startup.sh"]
+
 # Expose ports.
 EXPOSE 5901
