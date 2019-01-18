@@ -1,5 +1,6 @@
 FROM babim/ubuntubase:18.04
-ENV ADMINAPP=false
+ENV ADMINAPP=true
+ENV REALVNC_OPTION=true
 
 # download option script
 RUN apt-get update && \
