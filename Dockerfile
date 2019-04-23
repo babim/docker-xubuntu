@@ -4,17 +4,11 @@ ENV REALVNC_OPTION true
 
 # download option script
 RUN apt-get update && \
-    apt-get install -y wget bash && cd / && wget --no-check-certificate https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh && \
+    apt-get install -y curl bash && cd / && wget --no-check-certificate https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh && \
     chmod 755 /option.sh
 
 # install
-RUN wget --no-check-certificate -O - https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Xubuntu%20install/xubuntu_install.sh | bash
-
-# clean
-RUN apt-get purge build-essential automake -y && apt-get clean && \
-    apt-get autoclean && \
-    apt-get autoremove -y --purge && \
-    rm -rf /var/lib/apt/lists/*
+RUN curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20Xubuntu%20install/xubuntu_install.sh | bash
 
 CMD ["/startup.sh"]
 
