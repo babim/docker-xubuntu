@@ -1,4 +1,4 @@
-FROM babim/ubuntubase:20.04
+FROM babim/ubuntubase:22.04
 ENV ADMINAPP true
 ENV REALVNC_OPTION true
 
